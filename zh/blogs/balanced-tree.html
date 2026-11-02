@@ -4,7 +4,7 @@
 <h1>平衡树学习笔记</h1>
 <p>
     学校 2025 冬令营有这样一道题：<a href="https://www.luogu.com.cn/problem/P3165">[CQOI2014] 排序机械臂</a>。<br>
-    由于我不会平衡树，所以我打开了 <a href="https://oi-wiki.org">OI Wiki</a>。<br>
+    由于我那时不会平衡树，所以我打开了 <a href="https://oi-wiki.org">OI Wiki</a>。<br>
     然后我打算写一个 <a href="https://oi-wiki.org/ds/treap/#%E6%97%A0%E6%97%8B-treap">无旋 Treap</a>。<br>
     （为什么很多人叫它 FHQ Treap）<sup>[1]</sup>
 </p>
@@ -17,8 +17,7 @@
 <h2>Split 操作</h2>
 <p>
     Split 操作有按值分裂和按排名分裂两种类型。<br>
-    <b>按值分裂</b>接受 val 一个参数，返回两棵子树：一棵 ≤val 的，一棵 &gt;val 的，如图所示：<br>
-    <img src="https://img.picgo.net/2025/01/23/split6c4962023197f35a.png"><br>
+    <b>按值分裂</b>接受 val 一个参数，返回两棵子树：一棵 ≤val 的，一棵 &gt;val 的。<br>
     如何进行这个操作呢？<br>
     引用一张来自 OI-Wiki 的图片：<br>
     <img src="https://oi-wiki.org/ds/images/treap-none-rot-split-by-val.svg"><br>
@@ -97,8 +96,8 @@ tuple<int, int, int> split_by_rank(int n, int rk) {
         <li>将区间 [l, r] 翻转</li>
         <li>求区间 [l, n] 的最小值位置</li>
     </ul>
-    第二个操作很好办，设 mi 为当前节点下的最小值，递归即可。（注：可以直接不停往左子树跑）
-    第一个操作需要一个 lazy-tag。设 inv 为当前节点有没有翻转，split 或 merge 时 push_down（不能记 v 值，否则很难下传）。
+    第二个操作很好办，设 mi 为当前节点下的最小值，递归即可。<br>
+    第一个操作需要一个 lazy-tag。设 inv 为当前节点有没有翻转，split 或 merge 时 push_down（不能记 v 值，否则很难下传）。<br>
     C++ 代码：<br>
     <pre><code>#include <bits/stdc++.h>
 using namespace std;
