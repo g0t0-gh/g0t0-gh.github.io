@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Wolfram's 1D Cellular Automata</title>
+    </head>
+    <body>
+        <h1>
+            Wolfram's 1D Cellular Automata
+        </h1>
+        <h2>
+            Intoduction
+        </h2>
+        <p>
+            Wolfram's 1D cellular automata have been created by Stephen Wolfram in 1983.<sup>[1]</sup> These automata can translate to a interger in 0~255 from this way below:
+            <pre>The neighbours: 111 110 101 100 011 010 001 000
+Next state:      1   0   1   1   0   0   0   0</pre>
+            10110000 in binary is 176 in decimal, so the interger of the rule is 176, and the rule is called <b>Rule 176</b>.
+        </p>
+        <h2>
+            Symmetries
+        </h2>
+        <p>
+            Flipping: <code>01101011 -> 11010110</code><br>
+            The rule
+            <pre>111 110 101 100 011 010 001 000
+ 1   0   1   1   0   0   0   0</pre>
+            will turn to
+            <pre>111 011 101 001 110 010 100 000
+ 1   0   1   1   0   0   0   0</pre>
+            .<br>
+            Black-white invertion: <code>01101011 -> 10010100</code><br>
+            The rule
+            <pre>111 110 101 100 011 010 001 000
+ 1   0   1   1   0   0   0   0</pre>
+            will turn to
+            <pre>>000 001 010 011 100 101 110 111
+ 0   1   0   0   1   1   1   1</pre>
+            .
+        </p>
+        <h2>
+            Definitions
+        </h2>
+        <p>
+            Turing-Complete+ means Turing-Complete with finite population.<br>
+            PRAM means <b>parallel, random-access machine</b>.<br>
+            All the computing complexness are optimized.
+        </p>
+        <h2>
+            Rules
+        </h2>
+        <h3>
+            Rule 0
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 0
+Black-white invertion: Rule 255
+Flipping + invertion:  Rule 255
+
+Wolfram classes:       I (1)
+
+Computing Complexness: O(n)
+NC 
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   0   0   0</pre>
+        </p>
+        <h3>
+            Rule 1
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 1
+Black-white invertion: Rule 127
+Flipping + invertion:  Rule 127
+
+Wolfram classes:       II (1, p2)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   0   0   1</pre>
+        Stable
+        </p>
+        <h3>
+            Rule 2
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 16
+Black-white invertion: Rule 191
+Flipping + invertion:  Rule 247
+
+Wolfram classes:       II (1, -c)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   0   1   0</pre>
+        </p>
+        <h3>
+            Rule 3
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 17
+Black-white invertion: Rule 63
+Flipping + invertion:  Rule 119
+
+Wolfram classes:       I (2, c/2)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   0   1   1</pre>
+        <h3>
+            Rule 4
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 4
+Black-white invertion: Rule 223
+Flipping + invertion:  Rule 223
+
+Wolfram classes:       I (1, p1)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   1   0   0</pre>
+        </p>
+        <h3>
+            Rule 5
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 5
+Black-white invertion: Rule 95
+Flipping + invertion:  Rule 95
+
+Wolfram classes:       II (2, p2)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   1   0   1</pre>
+        </p>
+        <h3>
+            Rule 6
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 20
+Black-white invertion: Rule 159
+Flipping + invertion:  Rule 215
+
+Wolfram classes:       II (1, -2c/2)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   1   1   0</pre>
+        </p>
+        <h3>
+            Rule 7
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 21
+Black-white invertion: Rule 31
+Flipping + invertion:  Rule 87
+
+Wolfram classes:       I (ω)
+
+Computing Complexness: O(n)
+Complexness with PRAM: O(log n)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   0   1   1   1</pre>
+        </p>
+            There is a structure below:
+            <pre>0001010101000
+1111010101011
+0000010101000
+1111110101011
+0000000101000
+1111111101011
+0000000001000
+1111111111011
+0000000000000</pre>
+            It will 'erode' the 1s and let all cells die out.
+        </p>
+        <h3>
+            Rule 8
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 64
+Black-white invertion: Rule 239
+Flipping + invertion:  Rule 253
+
+Wolfram classes:       I (2)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   1   0   0   0</pre>
+        </p>
+        <h3>
+            Rule 9
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 64
+Black-white invertion: Rule 239
+Flipping + invertion:  Rule 253
+
+Wolfram classes:       II
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   1   0   0   1</pre>
+        </p>
+        <h3>
+            Rule 10
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 80
+Black-white invertion: Rule 175
+Flipping + invertion:  Rule 245
+
+Wolfram classes:       II (1, -c)
+
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   1   0   1   0</pre>
+        </p>
+        <h3>
+            Rule 11
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 81
+Black-white invertion: Rule 47
+Flipping + invertion:  Rule 117
+
+Wolfram classes:       II
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   1   0   1   1</pre>
+        </p>
+        <h3>
+            Rule 12
+        </h3>
+        <p>
+            <pre>Flipping:              Rule 81
+Black-white invertion: Rule 47
+Flipping + invertion:  Rule 117
+
+Wolfram classes:       I (ω)
+
+Computing Complexness: O(n)
+Complexness with PRAM: O(log n)
+
+111 110 101 100 011 010 001 000
+ 0   0   0   0   1   1   0   0</pre>
+        <h2>
+            References
+        </h2>
+        <p>
+            [1] <a href="Rule 30 -- from Wolfram MathWorld">https://mathworld.wolfram.com/Rule30.html</a>
+        </p>
+    </body>
+</html>
