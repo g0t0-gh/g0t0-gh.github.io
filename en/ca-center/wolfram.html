@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <script src="lv-plugin.js"></script>
         <title>Wolfram's 1D Cellular Automata</title>
     </head>
     <body>
@@ -60,11 +61,17 @@ Flipping + invertion:  Rule 255
 
 Wolfram classes:       I (1)
 
-Computing Complexness: O(n)
-NC 
+Computing Complexness: O(1)
+Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   0   0   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W0
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 1
@@ -81,7 +88,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   0   0   1</pre>
-        Stable
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W1
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 2
@@ -99,6 +111,12 @@ Complexness with PRAM: O(1)
 111 110 101 100 011 010 001 000
  0   0   0   0   0   0   1   0</pre>
         </p>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W2
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         <h3>
             Rule 3
         </h3>
@@ -114,6 +132,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   0   1   1</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W3
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         <h3>
             Rule 4
         </h3>
@@ -129,6 +153,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   1   0   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W4
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 5
@@ -145,6 +175,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   1   0   1</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W5
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 6
@@ -154,13 +190,19 @@ Complexness with PRAM: O(1)
 Black-white invertion: Rule 159
 Flipping + invertion:  Rule 215
 
-Wolfram classes:       II (1, -2c/2)
+Wolfram classes:       II (ω, -2c/2)
 
 Computing Complexness: O(1)
 Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   0   1   1   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W6
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 7
@@ -188,6 +230,12 @@ Complexness with PRAM: O(log n)
 0000000001000
 1111111111011
 0000000000000</pre>
+        <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W7
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
             It will 'erode' the 1s and let all cells die out.
         </p>
         <h3>
@@ -205,6 +253,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   1   0   0   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W8
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 9
@@ -218,6 +272,12 @@ Wolfram classes:       II
 
 111 110 101 100 011 010 001 000
  0   0   0   0   1   0   0   1</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W9
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 10
@@ -234,6 +294,12 @@ Complexness with PRAM: O(1)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   1   0   1   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W10
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         </p>
         <h3>
             Rule 11
@@ -247,22 +313,40 @@ Wolfram classes:       II
 
 111 110 101 100 011 010 001 000
  0   0   0   0   1   0   1   1</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W11
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
+            In this rule, a single cell can disturb the background right:
+            <pre>000100000000
+110101111111
+000101000000
+110101011111
+            </pre>
         </p>
         <h3>
             Rule 12
         </h3>
         <p>
-            <pre>Flipping:              Rule 81
-Black-white invertion: Rule 47
-Flipping + invertion:  Rule 117
+            <pre>Flipping:              Rule []
+Black-white invertion: Rule []
+Flipping + invertion:  Rule []
 
-Wolfram classes:       I (ω)
+Wolfram classes:       II (2, p1)
 
 Computing Complexness: O(n)
 Complexness with PRAM: O(log n)
 
 111 110 101 100 011 010 001 000
  0   0   0   0   1   1   0   0</pre>
+            <div class="viewer">
+                <textarea rows=4 cols=70>
+x = 256, y = 1, rule = W12
+bboobobboobbbbbobbobobooobbbooobbboboobbboobooooooboboobbboboooooboooobbbbobboooobbobbobobobooooobbooboobooooooobooobobboboobboooooobboboooooooobboooooobobooobobbbooobobbbobbbbbooboooooboobobobbbbboobobbbbboooboooobbooobooobbbobobobooobooooobobobbbooooobob!</textarea><br>
+                <canvas width="560" height="560"></canvas>
+		    </div>
         <h2>
             References
         </h2>
